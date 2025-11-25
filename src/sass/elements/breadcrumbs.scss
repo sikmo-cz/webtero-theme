@@ -1,0 +1,33 @@
+.breadcrumbs {
+    margin-top: rem( 20px );
+
+    ul {
+        display: flex;
+
+        li {
+            font-size: rem(13px);
+
+            &::after {
+                content: "";
+
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M4.5 9L7.5 6L4.5 3' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                width: rem( 12px );
+                height: rem( 12px );
+                display: inline-block;
+                margin-inline: rem( 6px );
+                vertical-align: middle;
+            }
+
+            &:last-child::after {
+                content: none;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}

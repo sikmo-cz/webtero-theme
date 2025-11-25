@@ -1,0 +1,15 @@
+.parent-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+    object-position: center;
+	z-index: 0;
+}
+
+figure:has( img.parent-background ) {
+	position: relative;
+	overflow: hidden;
+}

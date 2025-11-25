@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wt/text-content",
+	"title": "Text Content",
+	"category": "webtero-blocks",
+	"icon": "edit",
+	"description": "Rich text content editor",
+	"keywords": ["text", "paragraph", "content"],
+	"textdomain": "webtero",
+	"supports": {
+		"anchor": true,
+		"className": true
+	},
+	"attributes": {
+		"webteroOptions": {
+			"type": "string",
+			"default": ""
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"content": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"example": {
+		"attributes": {
+			"title": "Sample hehe",
+			"content": "<p>This is sample content for the block inserter preview.</p>"
+		}
+	}
+}

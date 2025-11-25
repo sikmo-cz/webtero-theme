@@ -1,0 +1,93 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wt/tester",
+	"title": "Tester Block",
+	"category": "webtero-blocks",
+	"icon": "admin-tools",
+	"description": "Comprehensive test block with ALL field types for testing",
+	"keywords": ["test", "fields", "all", "debug"],
+	"textdomain": "webtero",
+	"supports": {
+		"anchor": true,
+		"className": true
+	},
+	"attributes": {
+		"webteroOptions": {
+			"type": "string",
+			"default": ""
+		},
+		"text_field": {
+			"type": "string",
+			"default": ""
+		},
+		"number_field": {
+			"type": "number",
+			"default": 0
+		},
+		"range_field": {
+			"type": "number",
+			"default": 50
+		},
+		"textarea_field": {
+			"type": "string",
+			"default": ""
+		},
+		"radio_field": {
+			"type": "string",
+			"default": "option1"
+		},
+		"checkbox_field": {
+			"type": "boolean",
+			"default": false
+		},
+		"toggle_field": {
+			"type": "boolean",
+			"default": false
+		},
+		"button_group_field": {
+			"type": "string",
+			"default": "left"
+		},
+		"button_group_multiple": {
+			"type": "array",
+			"default": []
+		},
+		"color_field": {
+			"type": "string",
+			"default": "#3498db"
+		},
+		"select_field": {
+			"type": "string",
+			"default": "value1"
+		},
+		"enhanced_select_field": {
+			"type": "string",
+			"default": ""
+		},
+		"enhanced_select_multiple": {
+			"type": "array",
+			"default": []
+		},
+		"media_field": {
+			"type": "string",
+			"default": ""
+		},
+		"tiptap_field": {
+			"type": "string",
+			"default": ""
+		},
+		"repeater_field": {
+			"type": "array",
+			"default": []
+		}
+	},
+	"example": {
+		"attributes": {
+			"text_field": "Sample Text",
+			"number_field": 42,
+			"toggle_field": true,
+			"color_field": "#e74c3c"
+		}
+	}
+}

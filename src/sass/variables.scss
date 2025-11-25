@@ -1,0 +1,47 @@
+// Breakpoints
+$breakpoints: (
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+    'xxl': 1400px
+) !default;
+
+// Container max widths
+$container-max-widths: (
+    'sm': 540px,
+    'md': 720px,
+    'lg': 960px,
+    'xl': 1140px,
+    'xxl': 1320px
+) !default;
+
+// Grid
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.5rem !default;
+$grid-row-gap: 0 !default;
+
+// Spacing scale (for margin and padding utilities)
+$spacer: 1rem !default;
+$spacers: (
+    0: 0,
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3
+) !default;
+
+// Display utilities
+$displays: none, inline, inline-block, block, grid, table, table-row, table-cell, flex, inline-flex !default;
+
+// Flex utilities
+$flex-directions: row, row-reverse, column, column-reverse !default;
+$flex-wraps: wrap, nowrap, wrap-reverse !default;
+$justify-content-values: flex-start, flex-end, center, space-between, space-around, space-evenly !default;
+$align-items-values: flex-start, flex-end, center, baseline, stretch !default;
+$align-content-values: flex-start, flex-end, center, space-between, space-around, stretch !default;
+$align-self-values: auto, flex-start, flex-end, center, baseline, stretch !default;
+
+// Position utilities
+$positions: static, relative, absolute, fixed, sticky !default;

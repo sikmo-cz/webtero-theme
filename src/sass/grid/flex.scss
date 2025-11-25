@@ -1,0 +1,159 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// Flex container
+.d-flex {
+  display: flex !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+// Flex direction
+@each $direction in $flex-directions {
+  .flex-#{$direction} {
+    flex-direction: $direction !important;
+  }
+}
+
+// Flex wrap
+@each $wrap in $flex-wraps {
+  .flex-#{$wrap} {
+    flex-wrap: $wrap !important;
+  }
+}
+
+// Justify content
+@each $value in $justify-content-values {
+  .justify-content-#{$value} {
+    justify-content: $value !important;
+  }
+}
+
+// Align items
+@each $value in $align-items-values {
+  .align-items-#{$value} {
+    align-items: $value !important;
+  }
+}
+
+// Align content
+@each $value in $align-content-values {
+  .align-content-#{$value} {
+    align-content: $value !important;
+  }
+}
+
+// Align self
+@each $value in $align-self-values {
+  .align-self-#{$value} {
+    align-self: $value !important;
+  }
+}
+
+// Flex grow and shrink
+.flex-fill {
+  flex: 1 1 auto !important;
+}
+
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1 !important;
+}
+
+// Gap utilities
+.gap-0 { gap: 0 !important; }
+.gap-1 { gap: 0.25rem !important; }
+.gap-2 { gap: 0.5rem !important; }
+.gap-3 { gap: 1rem !important; }
+.gap-4 { gap: 1.5rem !important; }
+.gap-5 { gap: 3rem !important; }
+
+// Responsive flex utilities
+@each $breakpoint, $value in $breakpoints {
+  @include media-up($breakpoint) {
+    .d-#{$breakpoint}-flex {
+      display: flex !important;
+    }
+    
+    .d-#{$breakpoint}-inline-flex {
+      display: inline-flex !important;
+    }
+    
+    @each $direction in $flex-directions {
+      .flex-#{$breakpoint}-#{$direction} {
+        flex-direction: $direction !important;
+      }
+    }
+    
+    @each $wrap in $flex-wraps {
+      .flex-#{$breakpoint}-#{$wrap} {
+        flex-wrap: $wrap !important;
+      }
+    }
+    
+    @each $justify in $justify-content-values {
+      .justify-content-#{$breakpoint}-#{$justify} {
+        justify-content: $justify !important;
+      }
+    }
+    
+    @each $align in $align-items-values {
+      .align-items-#{$breakpoint}-#{$align} {
+        align-items: $align !important;
+      }
+    }
+    
+    @each $align in $align-content-values {
+      .align-content-#{$breakpoint}-#{$align} {
+        align-content: $align !important;
+      }
+    }
+    
+    @each $align in $align-self-values {
+      .align-self-#{$breakpoint}-#{$align} {
+        align-self: $align !important;
+      }
+    }
+    
+    .flex-#{$breakpoint}-fill {
+      flex: 1 1 auto !important;
+    }
+    
+    .flex-#{$breakpoint}-grow-0 {
+      flex-grow: 0 !important;
+    }
+    
+    .flex-#{$breakpoint}-grow-1 {
+      flex-grow: 1 !important;
+    }
+    
+    .flex-#{$breakpoint}-shrink-0 {
+      flex-shrink: 0 !important;
+    }
+    
+    .flex-#{$breakpoint}-shrink-1 {
+      flex-shrink: 1 !important;
+    }
+    
+    // Responsive gaps
+    .gap-#{$breakpoint}-0 { gap: 0 !important; }
+    .gap-#{$breakpoint}-1 { gap: 0.25rem !important; }
+    .gap-#{$breakpoint}-2 { gap: 0.5rem !important; }
+    .gap-#{$breakpoint}-3 { gap: 1rem !important; }
+    .gap-#{$breakpoint}-4 { gap: 1.5rem !important; }
+    .gap-#{$breakpoint}-5 { gap: 3rem !important; }
+  }
+}

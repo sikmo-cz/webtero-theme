@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wt/hero",
+	"title": "Hero",
+	"category": "webtero-blocks",
+	"icon": "cover-image",
+	"description": "Hero section with text content and background image",
+	"keywords": ["hero", "banner", "header"],
+	"textdomain": "webtero",
+	"supports": {
+		"anchor": true,
+		"className": true
+	},
+	"attributes": {
+		"webteroOptions": {
+			"type": "string",
+			"default": ""
+		},
+		"text_content": {
+			"type": "string",
+			"default": ""
+		},
+		"background_image": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"example": {
+		"attributes": {
+			"text_content": "<h1>Welcome to Our Site</h1><p>This is a hero section.</p>",
+			"background_image": ""
+		}
+	}
+}

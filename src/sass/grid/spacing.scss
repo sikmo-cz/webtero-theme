@@ -1,0 +1,152 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// Margin and padding utilities
+// m = margin, p = padding
+// t = top, b = bottom, s = start (left), e = end (right), x = horizontal, y = vertical
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $size, $length in $spacers {
+    // All sides
+    .#{$abbrev}-#{$size} {
+      #{$prop}: $length !important;
+    }
+    
+    // Top
+    .#{$abbrev}t-#{$size} {
+      #{$prop}-top: $length !important;
+    }
+    
+    // Bottom
+    .#{$abbrev}b-#{$size} {
+      #{$prop}-bottom: $length !important;
+    }
+    
+    // Start (left)
+    .#{$abbrev}s-#{$size} {
+      #{$prop}-left: $length !important;
+    }
+    
+    // End (right)
+    .#{$abbrev}e-#{$size} {
+      #{$prop}-right: $length !important;
+    }
+    
+    // Horizontal (left and right)
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-left: $length !important;
+      #{$prop}-right: $length !important;
+    }
+    
+    // Vertical (top and bottom)
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-top: $length !important;
+      #{$prop}-bottom: $length !important;
+    }
+  }
+  
+  // Auto margins
+  @if $abbrev == m {
+    .m-auto {
+      margin: auto !important;
+    }
+    
+    .mt-auto {
+      margin-top: auto !important;
+    }
+    
+    .mb-auto {
+      margin-bottom: auto !important;
+    }
+    
+    .ms-auto {
+      margin-left: auto !important;
+    }
+    
+    .me-auto {
+      margin-right: auto !important;
+    }
+    
+    .mx-auto {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    
+    .my-auto {
+      margin-top: auto !important;
+      margin-bottom: auto !important;
+    }
+  }
+}
+
+// Responsive spacing utilities
+@each $breakpoint, $value in $breakpoints {
+  @include media-up($breakpoint) {
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $spacers {
+        .#{$abbrev}-#{$breakpoint}-#{$size} {
+          #{$prop}: $length !important;
+        }
+        
+        .#{$abbrev}t-#{$breakpoint}-#{$size} {
+          #{$prop}-top: $length !important;
+        }
+        
+        .#{$abbrev}b-#{$breakpoint}-#{$size} {
+          #{$prop}-bottom: $length !important;
+        }
+        
+        .#{$abbrev}s-#{$breakpoint}-#{$size} {
+          #{$prop}-left: $length !important;
+        }
+        
+        .#{$abbrev}e-#{$breakpoint}-#{$size} {
+          #{$prop}-right: $length !important;
+        }
+        
+        .#{$abbrev}x-#{$breakpoint}-#{$size} {
+          #{$prop}-left: $length !important;
+          #{$prop}-right: $length !important;
+        }
+        
+        .#{$abbrev}y-#{$breakpoint}-#{$size} {
+          #{$prop}-top: $length !important;
+          #{$prop}-bottom: $length !important;
+        }
+      }
+      
+      // Responsive auto margins
+      @if $abbrev == m {
+        .m-#{$breakpoint}-auto {
+          margin: auto !important;
+        }
+        
+        .mt-#{$breakpoint}-auto {
+          margin-top: auto !important;
+        }
+        
+        .mb-#{$breakpoint}-auto {
+          margin-bottom: auto !important;
+        }
+        
+        .ms-#{$breakpoint}-auto {
+          margin-left: auto !important;
+        }
+        
+        .me-#{$breakpoint}-auto {
+          margin-right: auto !important;
+        }
+        
+        .mx-#{$breakpoint}-auto {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        
+        .my-#{$breakpoint}-auto {
+          margin-top: auto !important;
+          margin-bottom: auto !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wt/two-columns",
+	"title": "Two Columns",
+	"category": "webtero-blocks",
+	"icon": "columns",
+	"description": "Two column layout with text content",
+	"keywords": ["columns", "two", "layout"],
+	"textdomain": "webtero",
+	"supports": {
+		"anchor": true,
+		"className": true
+	},
+	"attributes": {
+		"webteroOptions": {
+			"type": "string",
+			"default": ""
+		},
+		"left_content": {
+			"type": "string",
+			"default": ""
+		},
+		"right_content": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"example": {
+		"attributes": {
+			"left_content": "<h3>Left Column</h3><p>Content here.</p>",
+			"right_content": "<h3>Right Column</h3><p>Content here.</p>"
+		}
+	}
+}

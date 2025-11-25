@@ -1,0 +1,90 @@
+/**
+ * FAQ Block Styles
+ */
+
+.webtero-faq {
+	margin: 2rem 0;
+}
+
+.webtero-faq__item {
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.webtero-faq__item:first-child {
+	border-top: 1px solid #e0e0e0;
+}
+
+.webtero-faq__question {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.25rem 1rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+	text-align: left;
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: #333;
+	transition: background-color 0.2s ease;
+}
+
+.webtero-faq__question:hover {
+	background-color: #f9f9f9;
+}
+
+.webtero-faq__question:focus {
+	outline: 2px solid #0073aa;
+	outline-offset: -2px;
+}
+
+.webtero-faq__question-text {
+	flex: 1;
+	padding-right: 1rem;
+}
+
+.webtero-faq__icon {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: #666;
+	min-width: 1.5rem;
+	text-align: center;
+	line-height: 1;
+}
+
+.webtero-faq__answer {
+	overflow: hidden;
+	transition: max-height 0.3s ease;
+}
+
+.webtero-faq__answer[hidden] {
+	display: none;
+}
+
+.webtero-faq__answer-content {
+	padding: 0 1rem 1.25rem 1rem;
+	color: #666;
+	line-height: 1.6;
+}
+
+.webtero-faq__answer-content p {
+	margin: 0 0 1rem;
+}
+
+.webtero-faq__answer-content p:last-child {
+	margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.webtero-faq__question {
+		padding: 1rem 0.75rem;
+		font-size: 1rem;
+	}
+
+	.webtero-faq__answer-content {
+		padding: 0 0.75rem 1rem 0.75rem;
+		font-size: 0.9375rem;
+	}
+}

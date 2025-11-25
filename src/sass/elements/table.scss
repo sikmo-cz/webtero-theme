@@ -1,0 +1,37 @@
+.table {
+    border: 1px solid #f1f1f1;
+    border-radius: rem(8px);
+
+    table {
+        tr {
+            &:last-child {
+                th,
+                td {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        th,
+        td {
+            text-align: left;
+            border-bottom: 1px solid #f1f1f1;
+            padding-inline: rem(24px);
+            padding-block: rem(16px);
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+
+        th {
+            padding-block: rem(12px);
+            color: rgba(0, 0, 0, 0.46);
+            font-size: rem(13px);
+        }
+
+        td {
+            font-size: rem(15px);
+        }
+    }
+}

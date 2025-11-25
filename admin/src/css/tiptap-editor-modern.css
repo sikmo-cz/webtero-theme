@@ -1,0 +1,485 @@
+/**
+ * Modern TipTap Editor Styles
+ * Gutenberg-inspired design with squircle hover states
+ *
+ * @package webtero
+ */
+
+/* ===================================
+   Toolbar Container
+   =================================== */
+
+.webtero-tiptap-toolbar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 4px;
+    padding: 4px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    border-radius: 2px 2px 0 0;
+    flex-wrap: wrap;
+}
+
+.webtero-tiptap-toolbar-left,
+.webtero-tiptap-toolbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.webtero-tiptap-toolbar-left {
+    flex: 1;
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+/* ===================================
+   Toolbar Button Base Styles
+   =================================== */
+
+.webtero-tiptap-toolbar button {
+    display: inline-flex;
+    align-items: center;
+    min-width: 28px;
+    height: 28px;
+    padding: 0 4px;
+    background: transparent;
+    border: none;
+    border-radius: 6px; /* Squircle */
+    color: #1e1e1e;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    position: relative;
+}
+
+.webtero-tiptap-toolbar button[data-action="image"] {
+    margin-left: auto;
+}
+
+.webtero-tiptap-toolbar button:hover {
+    background: #f0f0f0;
+}
+
+.webtero-tiptap-toolbar button:active {
+    background: #e0e0e0;
+}
+
+.webtero-tiptap-toolbar button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.webtero-tiptap-toolbar button:disabled:hover {
+    background: transparent;
+}
+
+/* ===================================
+   Active State (when tool is active in editor)
+   =================================== */
+
+.webtero-tiptap-toolbar button.is-active {
+    background: #e0f2fe; /* Light blue background */
+    color: #0369a1; /* Darker blue text */
+}
+
+.webtero-tiptap-toolbar button.is-active:hover {
+    background: #bae6fd;
+    color: #0c4a6e;
+}
+
+/* ===================================
+   SVG Icons
+   =================================== */
+
+.webtero-tiptap-toolbar button svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* ===================================
+   Toolbar Separators
+   =================================== */
+
+.webtero-toolbar-separator {
+    width: 1px;
+    height: 24px;
+    background: #ddd;
+
+    opacity: 0;
+}
+
+/* ===================================
+   Priority Tools (always visible)
+   =================================== */
+
+.webtero-toolbar-priority {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+}
+
+/* ===================================
+   Additional Tools (toggleable)
+   =================================== */
+
+.webtero-toolbar-additional {
+    display: none;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+}
+
+.webtero-toolbar-additional.is-visible {
+    display: flex;
+}
+
+/* ===================================
+   Toggle Button (See More)
+   =================================== */
+
+.webtero-toolbar-toggle:hover {
+    color: #1e1e1e;
+}
+
+.webtero-toolbar-toggle.is-open svg {
+    transform: rotate(180deg);
+}
+
+span.toolbar-btn__more svg {
+    display: block;
+    height: 12px;
+    width: 12px;
+}
+
+/* ===================================
+   Popup Menus (Heading, List, Align)
+   =================================== */
+
+.webtero-toolbar-popup {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 4px;
+    display: none;
+}
+
+.webtero-toolbar-popup.is-visible {
+    display: block;
+}
+
+.webtero-tiptap-toolbar button.webtero-toolbar-popup-item {
+    display: flex;
+    width: 100%;
+    padding: 4px 8px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    color: #1e1e1e;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    min-width: auto !important;
+    height: auto !important;
+    white-space: nowrap;
+}
+
+.webtero-tiptap-toolbar button.webtero-toolbar-popup-item:hover {
+    background: #f0f0f0;
+}
+
+.webtero-tiptap-toolbar button.webtero-toolbar-popup-item.is-active {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.webtero-tiptap-toolbar button.webtero-toolbar-popup-item svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* Heading popup specific s.webtero-tiptap-toolbar buttontyles */
+.webtero-toolbar-popup-item.heading-1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.webtero-tiptap-toolbar button.webtero-toolbar-popup-item.heading-2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.webtero-tiptap-toolbar button.webtero-toolbar-popup-item.heading-3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.webtero-tiptap-toolbar button.webtero-toolbar-popup-item.paragraph {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* ===================================
+   Popup Button with Indicator
+   =================================== */
+
+.webtero-toolbar-popup-button {
+    position: relative;
+}
+
+.webtero-toolbar-popup-button:hover::after {
+    opacity: 1;
+}
+
+.webtero-toolbar-popup-button.is-open {
+    background: #f0f0f0;
+}
+
+/* ===================================
+   Button with Label (for heading selector)
+   =================================== */
+
+.webtero-toolbar-button-label {
+    margin-left: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 12px; /* Make room for dropdown arrow */
+}
+
+/* ===================================
+   Image Button
+   =================================== */
+
+.webtero-toolbar-image-button {
+    background: #0073aa;
+    color: #ffffff;
+}
+
+.webtero-toolbar-image-button:hover {
+    background: #005a87;
+}
+
+.webtero-toolbar-image-button svg {
+    fill: #ffffff;
+}
+
+/* ===================================
+   Editor Content Area
+   =================================== */
+
+.webtero-tiptap-editor {
+    min-height: 200px;
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 0 0 2px 2px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #1e1e1e;
+}
+
+.webtero-tiptap-editor:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 1px #0073aa;
+}
+
+/* Editor placeholder */
+.webtero-tiptap-editor .is-editor-empty:first-child::before {
+    content: attr(data-placeholder);
+    color: #999;
+    pointer-events: none;
+    height: 0;
+}
+
+/* ===================================
+   Content Styling
+   =================================== */
+
+.webtero-tiptap-editor h1,
+.webtero-tiptap-editor h2,
+.webtero-tiptap-editor h3,
+.webtero-tiptap-editor h4,
+.webtero-tiptap-editor h5,
+.webtero-tiptap-editor h6 {
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.webtero-tiptap-editor h1 { font-size: 2em; }
+.webtero-tiptap-editor h2 { font-size: 1.5em; }
+.webtero-tiptap-editor h3 { font-size: 1.25em; }
+.webtero-tiptap-editor h4 { font-size: 1.1em; }
+.webtero-tiptap-editor h5 { font-size: 1em; }
+.webtero-tiptap-editor h6 { font-size: 0.9em; }
+
+.webtero-tiptap-editor p {
+    margin: 0;
+}
+
+.webtero-tiptap-editor strong {
+    font-weight: 600;
+}
+
+.webtero-tiptap-editor em {
+    font-style: italic;
+}
+
+.webtero-tiptap-editor a {
+    color: #0073aa;
+    text-decoration: underline;
+}
+
+.webtero-tiptap-editor a:hover {
+    color: #005a87;
+}
+
+.webtero-tiptap-editor ul,
+.webtero-tiptap-editor ol {
+    padding-left: 24px;
+    margin: 0;
+}
+
+.webtero-tiptap-editor li {
+    margin: 4px 0;
+}
+
+.webtero-tiptap-editor code {
+    background: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.webtero-tiptap-editor pre {
+    background: #f5f5f5;
+    padding: 12px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.webtero-tiptap-editor pre code {
+    background: transparent;
+    padding: 0;
+}
+
+.webtero-tiptap-editor blockquote {
+    border-left: 3px solid #ddd;
+    padding-left: 16px;
+    margin-left: 0;
+    color: #666;
+}
+
+/* Text alignment */
+.webtero-tiptap-editor [style*="text-align: left"] {
+    text-align: left;
+}
+
+.webtero-tiptap-editor [style*="text-align: center"] {
+    text-align: center;
+}
+
+.webtero-tiptap-editor [style*="text-align: right"] {
+    text-align: right;
+}
+
+/* ===================================
+   Image in Editor
+   =================================== */
+
+.webtero-tiptap-editor img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+
+@media (max-width: 768px) {
+    .webtero-tiptap-toolbar {
+        flex-wrap: wrap;
+    }
+
+    .webtero-toolbar-separator {
+        display: none;
+    }
+
+    .webtero-toolbar-additional {
+        width: 100%;
+        margin-top: 4px;
+        padding-top: 4px;
+        border-top: 1px solid #ddd;
+    }
+
+    .webtero-toolbar-additional.is-visible {
+        display: flex;
+    }
+}
+
+/* ===================================
+   Link Dialog (if you use bubble menu)
+   =================================== */
+
+.webtero-link-dialog {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.webtero-link-dialog input {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    min-width: 200px;
+}
+
+.webtero-link-dialog input:focus {
+    outline: none;
+    border-color: #0073aa;
+}
+
+.webtero-link-dialog button {
+    padding: 6px 12px;
+    background: #0073aa;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.webtero-link-dialog button:hover {
+    background: #005a87;
+}
+
+.webtero-link-dialog button.secondary {
+    background: #f0f0f0;
+    color: #1e1e1e;
+}
+
+.webtero-link-dialog button.secondary:hover {
+    background: #e0e0e0;
+}

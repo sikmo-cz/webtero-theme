@@ -1,0 +1,29 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// Display utilities
+@each $display in $displays {
+  .d-#{$display} {
+    display: $display !important;
+  }
+}
+
+// Responsive display utilities
+@each $breakpoint, $value in $breakpoints {
+  @include media-up($breakpoint) {
+    @each $display in $displays {
+      .d-#{$breakpoint}-#{$display} {
+        display: $display !important;
+      }
+    }
+  }
+}
+
+// Print display utilities
+@media print {
+  @each $display in $displays {
+    .d-print-#{$display} {
+      display: $display !important;
+    }
+  }
+}

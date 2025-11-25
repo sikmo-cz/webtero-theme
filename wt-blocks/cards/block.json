@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wt/cards",
+	"title": "Cards",
+	"category": "webtero-blocks",
+	"icon": "admin-tools",
+	"description": "",
+	"keywords": ["cards", "all"],
+	"textdomain": "webtero",
+	"supports": {
+		"anchor": true,
+		"className": true
+	},
+	"attributes": {
+		"webteroOptions": {
+			"type": "string",
+			"default": ""
+		},
+		"cards_items": {
+			"type": "array",
+			"default": []
+		}
+	},
+	"example": {
+		"attributes": {
+			"cards_items": {
+				"text_content": "<p>Sample text</p>"
+			}
+		}
+	}
+}

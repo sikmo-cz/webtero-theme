@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wt/video",
+	"title": "Video",
+	"category": "webtero-blocks",
+	"icon": "video-alt3",
+	"description": "Video player with MP4 file and poster image",
+	"keywords": ["video", "mp4", "media"],
+	"textdomain": "webtero",
+	"supports": {
+		"anchor": true,
+		"className": true
+	},
+	"attributes": {
+		"webteroOptions": {
+			"type": "string",
+			"default": ""
+		},
+		"video_file": {
+			"type": "string",
+			"default": ""
+		},
+		"poster_image": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"example": {
+		"attributes": {
+			"video_file": "",
+			"poster_image": ""
+		}
+	}
+}

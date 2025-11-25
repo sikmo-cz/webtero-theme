@@ -1,0 +1,40 @@
+/**
+ * Two Columns Block Styles
+ */
+
+.webtero-two-columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.webtero-two-columns__column {
+	min-width: 0; /* Prevent overflow */
+}
+
+.webtero-two-columns__column h1,
+.webtero-two-columns__column h2,
+.webtero-two-columns__column h3,
+.webtero-two-columns__column h4,
+.webtero-two-columns__column h5,
+.webtero-two-columns__column h6 {
+	margin: 0 0 1rem;
+}
+
+.webtero-two-columns__column p {
+	margin: 0 0 1rem;
+	line-height: 1.6;
+}
+
+.webtero-two-columns__column p:last-child {
+	margin-bottom: 0;
+}
+
+/* Responsive: Stack on mobile */
+@media (max-width: 768px) {
+	.webtero-two-columns {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+}

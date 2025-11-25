@@ -1,0 +1,38 @@
+/**
+ * Spacer Block Styles
+ */
+
+.webtero-spacer {
+	display: block;
+	width: 100%;
+	background: transparent;
+	transition: height 0.2s ease;
+}
+
+/* Editor preview - show a subtle visual indicator */
+.editor-styles-wrapper .webtero-spacer {
+	background: repeating-linear-gradient(
+		90deg,
+		transparent,
+		transparent 10px,
+		rgba(0, 0, 0, 0.03) 10px,
+		rgba(0, 0, 0, 0.03) 11px
+	);
+	border-top: 1px dashed rgba(0, 0, 0, 0.1);
+	border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+
+.editor-styles-wrapper .webtero-spacer::after {
+	content: attr(style);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(255, 255, 255, 0.9);
+	padding: 4px 8px;
+	font-size: 11px;
+	color: #666;
+	border-radius: 3px;
+	pointer-events: none;
+}

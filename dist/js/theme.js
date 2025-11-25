@@ -1,0 +1,2 @@
+var ThemeJS;(()=>{"use strict";window.innerHeight,window.theme={globals:{isTouch:"undefined"!=typeof window&&"ontouchstart"in window},init:function(){}},document.addEventListener("DOMContentLoaded",(function(){theme.init()})),ThemeJS={}})();
+//# sourceMappingURL=maps/theme.js.map

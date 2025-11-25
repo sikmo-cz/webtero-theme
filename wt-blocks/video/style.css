@@ -1,0 +1,56 @@
+/**
+ * Video Block Styles
+ */
+
+.webtero-video {
+	margin: 2rem 0;
+	position: relative;
+}
+
+.webtero-video__player {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 8px;
+	background-color: #000;
+}
+
+/* Placeholder styles */
+.webtero-video--placeholder {
+	min-height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f5f5f5;
+	border: 2px dashed #ddd;
+	border-radius: 8px;
+	color: #666;
+	text-align: center;
+	padding: 2rem;
+}
+
+.webtero-video--placeholder p {
+	margin: 0;
+	font-size: 1rem;
+}
+
+/* Video controls styling */
+.webtero-video__player::-webkit-media-controls-panel {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.webtero-video {
+		margin: 1.5rem 0;
+	}
+
+	.webtero-video--placeholder {
+		min-height: 200px;
+		padding: 1.5rem;
+	}
+
+	.webtero-video--placeholder p {
+		font-size: 0.9375rem;
+	}
+}

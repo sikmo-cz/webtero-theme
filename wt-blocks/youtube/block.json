@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wt/youtube",
+	"title": "YouTube",
+	"category": "webtero-blocks",
+	"icon": "video-alt3",
+	"description": "YouTube video embed with lazy loading",
+	"keywords": ["youtube", "video", "embed"],
+	"textdomain": "webtero",
+	"supports": {
+		"anchor": true,
+		"className": true
+	},
+	"attributes": {
+		"webteroOptions": {
+			"type": "string",
+			"default": ""
+		},
+		"youtube_url": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"example": {
+		"attributes": {
+			"youtube_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+		}
+	}
+}

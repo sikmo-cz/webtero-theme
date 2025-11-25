@@ -1,0 +1,51 @@
+@use 'variables' as *;
+
+// Media query mixin
+// Usage: @include media-up(md) { ... }
+@mixin media-up($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$breakpoint}` not found in $breakpoints";
+  }
+}
+
+// Media query down
+// Usage: @include media-down(md) { ... }
+@mixin media-down($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint) - 0.02px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$breakpoint}` not found in $breakpoints";
+  }
+}
+
+// Media query between
+// Usage: @include media-between(sm, lg) { ... }
+@mixin media-between($lower, $upper) {
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+    @media (min-width: map-get($breakpoints, $lower)) and (max-width: map-get($breakpoints, $upper) - 0.02px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoints not found";
+  }
+}
+
+// Generate responsive classes
+// Usage: @include responsive-classes('d') { display: block; }
+@mixin responsive-classes($prefix) {
+  @content;
+  
+  @each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+      .#{$prefix}-#{$breakpoint} {
+        @content;
+      }
+    }
+  }
+}

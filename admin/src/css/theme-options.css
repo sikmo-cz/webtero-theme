@@ -1,0 +1,774 @@
+/**
+ * Theme Options Admin CSS
+ */
+
+.webtero-theme-options {
+    max-width: 100%;
+}
+
+/* Header */
+.webtero-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+}
+
+.webtero-versions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.webtero-version-info {
+    font-weight: 600;
+    color: #2271b1;
+}
+
+/* Vertical Tabs Layout */
+.webtero-tabs-wrapper {
+    display: flex;
+    gap: 0;
+    margin: 20px 0;
+}
+
+/* Tabs sidebar */
+.nav-tab-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 0;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-right: none;
+    padding-top: 0;
+}
+
+.nav-tab-wrapper .nav-tab {
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #ccd0d4;
+    padding: 12px 15px;
+    background: #fff;
+    text-align: left;
+    font-weight: 400;
+}
+
+.nav-tab-wrapper .nav-tab:last-child {
+    border-bottom: none;
+}
+
+.nav-tab-wrapper .nav-tab:hover {
+    background: #f6f7f7;
+    color: #2271b1;
+}
+
+.nav-tab-wrapper .nav-tab.nav-tab-active {
+    background: #f0f0f1;
+    color: #2271b1;
+    font-weight: 600;
+    border-left: 3px solid #2271b1;
+    padding-left: 12px;
+}
+
+/* Tab content */
+.webtero-tab-content {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccd0d4;
+    border-radius: 0 4px 4px 0;
+    margin: 0;
+}
+
+/* Metaboxes */
+.metabox-holder {
+    margin-top: 0;
+}
+
+.webtero-tab-content .postbox {
+    margin-bottom: 20px;
+}
+
+.webtero-tab-content .postbox:last-child {
+    margin-bottom: 0;
+}
+
+.webtero-tab-content .postbox .inside {
+    margin: 0;
+    padding: 0;
+}
+
+.webtero-tab-content .form-table {
+    margin: 0;
+	background-color: #eaeaea;
+}
+
+.webtero-tab-content .form-table th, td {
+    padding: 8px 12px !important;
+	margin-bottom: 0 !important;
+}
+
+/* Media field */
+.webtero-media-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.webtero-media-preview {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+}
+
+.webtero-media-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.webtero-media-preview:empty::after {
+    content: "No image";
+    color: #999;
+    font-size: 12px;
+}
+
+/* Repeater */
+.webtero-repeater {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    background: #fafafa;
+}
+
+.webtero-repeater-items {
+    margin-bottom: 15px;
+}
+
+.webtero-repeater-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    position: relative;
+}
+
+.webtero-repeater-handle {
+    cursor: move;
+    color: #999;
+    padding: 5px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.webtero-repeater-handle:hover {
+    color: #333;
+}
+
+.webtero-repeater-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.webtero-repeater-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.webtero-repeater-field label {
+    font-weight: 600;
+    font-size: 12px;
+    color: #555;
+}
+
+.webtero-repeater-field input[type="text"],
+.webtero-repeater-field input[type="number"],
+.webtero-repeater-field textarea,
+.webtero-repeater-field select {
+    width: 100%;
+}
+
+.webtero-repeater-actions {
+    display: flex;
+    align-items: flex-start;
+}
+
+.webtero-repeater-remove {
+    padding: 5px 8px;
+    line-height: 1;
+    height: auto;
+    border-color: #dc3232;
+    color: #dc3232;
+}
+
+.webtero-repeater-remove:hover {
+    background: #dc3232;
+    color: #fff;
+    border-color: #dc3232;
+}
+
+.webtero-repeater-placeholder {
+    background: #f0f0f0;
+    border: 2px dashed #ccc;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.webtero-repeater-add {
+    display: block;
+    width: 100%;
+}
+
+/* Range slider */
+/* Range field wrapper */
+.webtero-range-field-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Range slider */
+.webtero-range-slider {
+    flex: 1;
+    min-width: 0; /* Allow flex shrinking */
+}
+
+/* Number input and suffix group */
+.webtero-range-input-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+/* Number input */
+.webtero-range-number {
+    width: 70px;
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    text-align: right;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.webtero-range-number:focus {
+    border-color: #0073aa;
+    outline: none;
+    box-shadow: 0 0 0 1px #0073aa;
+}
+
+/* Suffix label */
+.webtero-range-suffix {
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+    min-width: 30px;
+}
+
+/* Version history */
+.webtero-version-restore {
+    min-width: 80px;
+}
+
+/* Responsive - WordPress admin breakpoint */
+@media screen and (max-width: 782px) {
+    /* Switch to horizontal tabs on mobile */
+    .webtero-tabs-wrapper {
+        flex-direction: column;
+    }
+    
+    .nav-tab-wrapper {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        border: 1px solid #ccd0d4;
+        border-bottom: none;
+        border-radius: 4px 4px 0 0;
+        flex-wrap: nowrap;
+    }
+    
+    .nav-tab-wrapper .nav-tab {
+        border-right: 1px solid #ccd0d4;
+        border-bottom: none;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    
+    .nav-tab-wrapper .nav-tab:last-child {
+        border-right: none;
+    }
+    
+    .nav-tab-wrapper .nav-tab.nav-tab-active {
+        border-left: none;
+        border-bottom: 3px solid #2271b1;
+        padding-left: 15px;
+        padding-bottom: 9px;
+    }
+    
+    .webtero-tab-content {
+        border-radius: 0 0 4px 4px;
+    }
+    
+    .webtero-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .webtero-repeater-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .webtero-tab-content .form-table th,
+    .webtero-tab-content .form-table td {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Grid Layout for Fields (Desktop) */
+@media screen and (min-width: 1024px) {
+    .webtero-tab-content .form-table tbody {
+        display: grid;
+        grid-template-columns: repeat( 12, 1fr );
+        gap: 1px;
+    }
+    
+    .webtero-tab-content .form-table tr {
+        display: flex;
+		flex-flow: column;
+		box-sizing: border-box;
+		background-color: #fff;
+
+		td, th, .choices__inner {
+			width: 100%;
+			box-sizing: border-box;
+		}
+    }
+    
+    .webtero-tab-content .form-table tr[data-field-width="100"] {
+        grid-column: span 12;
+    }
+    
+    .webtero-tab-content .form-table tr[data-field-width="50"] {
+        grid-column: span 6;
+    }
+    
+    .webtero-tab-content .form-table tr[data-field-width="33"] {
+        grid-column: span 4;
+    }
+    
+    .webtero-tab-content .form-table tr[data-field-width="25"] {
+        grid-column: span 3;
+    }
+
+    .webtero-tab-content .form-table tr.repeater-row td {
+        width: 100%;
+		display: block;
+		box-sizing: border-box;
+    }
+}
+
+/* Toggle Switch (ACF Style with Variable Width) */
+.webtero-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.webtero-toggle {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.webtero-toggle input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.webtero-toggle-track {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: var(--toggle-width, 60px);
+    height: 28px;
+    background-color: #d2d2d2;
+    border-radius: 14px;
+    transition: background-color 0.3s;
+}
+
+.webtero-toggle input:checked + .webtero-toggle-track {
+    background-color: #2271b1;
+}
+
+/* Handle */
+.webtero-toggle-handle {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    top: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.webtero-toggle input:checked + .webtero-toggle-track .webtero-toggle-handle {
+    transform: translateX(calc(var(--toggle-width, 60px) - 28px));
+}
+
+/* Labels container */
+.webtero-toggle-labels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.webtero-toggle-label-on,
+.webtero-toggle-label-off {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+/* OFF label - positioned to the right of handle when unchecked */
+.webtero-toggle-label-off {
+    left: 30px;
+    opacity: 1;
+}
+
+/* ON label - positioned to the left of handle when checked */
+.webtero-toggle-label-on {
+    left: 8px;
+    opacity: 0;
+}
+
+.webtero-toggle input:checked + .webtero-toggle-track .webtero-toggle-label-on {
+    opacity: 1;
+}
+
+.webtero-toggle input:checked + .webtero-toggle-track .webtero-toggle-label-off {
+    opacity: 0;
+}
+
+.webtero-toggle input:focus + .webtero-toggle-track {
+    box-shadow: 0 0 0 2px rgba(34, 113, 177, 0.3);
+    outline: none;
+}
+
+.webtero-toggle input:disabled + .webtero-toggle-track {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.webtero-toggle-description {
+    font-size: 13px;
+    color: #646970;
+}
+
+/* Button Group */
+.webtero-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.webtero-button-group-item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.webtero-button-group-item:hover {
+    border-color: #2271b1;
+    background: #f6f7f7;
+}
+
+.webtero-button-group-item.active {
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+}
+
+.webtero-button-group-item input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.webtero-button-icon {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.webtero-button-text {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.webtero-button-group-item.active .webtero-button-text {
+    font-weight: 600;
+}
+
+/* Enhanced Select */
+.webtero-enhanced-select {
+    width: 100%;
+    max-width: 25em;
+}
+
+.choices {
+    margin-bottom: 0;
+}
+
+.choices__inner {
+    background: #fff;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    min-height: 30px;
+    padding: 4px 8px;
+    font-size: 13px;
+}
+
+.choices__inner:focus,
+.choices.is-focused .choices__inner {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+.choices__list--dropdown {
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.choices__item--selectable {
+    padding: 8px 12px;
+}
+
+.choices__item--selectable.is-highlighted {
+    background-color: #2271b1;
+}
+
+.choices[data-type*="select-multiple"] .choices__button {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.choices__input {
+    background-color: transparent;
+    font-size: 13px;
+}
+
+/* WordPress Color Picker - Floating */
+.wp-picker-container {
+    position: relative;
+}
+
+.wp-picker-container .wp-picker-holder {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    z-index: 100;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding-top: 30px;
+}
+
+.wp-picker-container .iris-picker {
+    position: relative;
+    z-index: 100;
+}
+
+/* Ensure color field wrapper doesn't expand */
+.webtero-tab-content .form-table td .wp-picker-container {
+    display: inline-block;
+}
+
+/* Close button for color picker */
+.webtero-color-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: #fff;
+    color: #646970;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.2s;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 101;
+}
+
+.hidden + .wp-picker-holder {
+    display: none;
+}
+
+.webtero-color-close:hover {
+    background: #f0f0f1;
+    color: #dc3232;
+}
+
+.webtero-color-close:active {
+    background: #dcdcde;
+}
+
+/* Responsive adjustments for new fields */
+@media screen and (max-width: 1023px) {
+    .webtero-button-group {
+        flex-direction: column;
+    }
+    
+    .webtero-button-group-item {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Tablet adjustments */
+@media screen and (min-width: 783px) and (max-width: 1200px) {
+    .nav-tab-wrapper {
+        width: 180px;
+    }
+    
+    .nav-tab-wrapper .nav-tab {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+}
+
+/* Large screens - more spacious */
+@media screen and (min-width: 1400px) {
+    .webtero-tabs-wrapper {
+        max-width: 1400px;
+    }
+    
+    .nav-tab-wrapper {
+        width: 220px;
+    }
+}
+
+/* conditional logic TODO: better */
+
+body:not(:has( [name="webtero_options[header_color_scheme]"][value="custom"]:checked )) {
+    tr[data-field-width]:has( [name="webtero_options[header_custom_text_color]"]  ), 
+    tr[data-field-width]:has( [name="webtero_options[header_custom_background_color]"] ) {
+        display: none;
+    }
+}
+
+.webtero-repeater-item:not(:has(
+    [name*="webtero_options[unordered_list_icons]"][name$="[type]"][value="custom"]:checked
+)) {
+    .webtero-repeater-field:has( .webtero-media-id ) {
+        display: none;
+    }
+}
+
+.webtero-repeater-item:has(
+    [name*="webtero_options[unordered_list_icons]"][name$="[type]"][value="custom"]:checked
+) {
+    .webtero-repeater-field:has( [name$="[defaults]"] ) {
+        display: none;
+    }
+}
+
+body:not(:has( [name="webtero_options[card_background_color]"][value="custom"]:checked )) {
+    tr[data-field-width]:has( [name="webtero_options[card_custom_background_color]"] ) td > * {
+        opacity: 0.25;
+        pointer-events: none;
+    }
+}
+
+body:not(:has( [name="webtero_options[card_text_color]"][value="custom"]:checked )) {
+    tr[data-field-width]:has( [name="webtero_options[card_custom_text_color]"] ) td > * {
+        opacity: 0.25;
+        pointer-events: none;
+    }
+}
+
+body:not(:has( [name="webtero_options[card_media_background]"][value="image"]:checked )) {
+    tr[data-field-width]:has( [name="webtero_options[card_media_background_image]"] ) td > *,
+    tr[data-field-width]:has( [name="webtero_options[card_image_repeat]"] ) td > *,
+    tr[data-field-width]:has( [name="webtero_options[card_image_position]"] ) td > *,
+    tr[data-field-width]:has( [name="webtero_options[card_image_size]"] ) td > *,
+    tr[data-field-width]:has( [name="webtero_options[card_media_background_overlay]"] ) td > *,
+    tr[data-field-width]:has( [name="webtero_options[card_media_overlay_color]"] ) td > * {
+        opacity: 0.25;
+        pointer-events: none;
+    }
+}
+
+body:not(:has( [name="webtero_options[card_media_background_overlay]"]:checked )) {
+    tr[data-field-width]:has( [name="webtero_options[card_media_overlay_color]"] ) td > * {
+        opacity: 0.25;
+        pointer-events: none;
+    }
+}
+
+body:not( :has( [name="webtero_options[scroll_top_button_type]"][value="image"]:checked ) ) {
+    tr[data-field-width]:has( [name="webtero_options[scroll_top_button_image]"] ) {
+        display: none;
+    }
+}
+
+body:not( :has( [name="webtero_options[scroll_top_button_type]"][value="text"]:checked ) ) {
+    tr[data-field-width]:has( [name="webtero_options[scroll_top_button_text]"] ) {
+        display: none;
+    }
+}

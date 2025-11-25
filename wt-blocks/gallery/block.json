@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wt/gallery",
+	"title": "Gallery",
+	"category": "webtero-blocks",
+	"icon": "format-gallery",
+	"description": "Image gallery with multiple selection and reordering",
+	"keywords": ["gallery", "images", "photos"],
+	"textdomain": "webtero",
+	"supports": {
+		"anchor": true,
+		"className": true
+	},
+	"attributes": {
+		"webteroOptions": {
+			"type": "string",
+			"default": ""
+		},
+		"gallery_images": {
+			"type": "array",
+			"default": []
+		}
+	},
+	"example": {
+		"attributes": {
+			"gallery_images": []
+		}
+	}
+}

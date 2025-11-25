@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wt/spacer",
+	"title": "Spacer",
+	"category": "webtero-blocks",
+	"icon": "minus",
+	"description": "Flexible spacing block with preset and custom heights",
+	"keywords": ["spacer", "spacing", "margin", "padding"],
+	"textdomain": "webtero",
+	"supports": {
+		"anchor": true,
+		"className": true
+	},
+	"attributes": {
+		"webteroOptions": {
+			"type": "string",
+			"default": ""
+		},
+		"height": {
+			"type": "string",
+			"default": "default"
+		},
+		"custom_desktop": {
+			"type": "number",
+			"default": 40
+		},
+		"custom_mobile": {
+			"type": "number",
+			"default": 20
+		}
+	},
+	"example": {
+		"attributes": {
+			"height": "default"
+		}
+	}
+}
